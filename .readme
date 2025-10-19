@@ -1,0 +1,44 @@
+# mkdir .venv
+# pipenv install django
+# pipenv shell
+# django-admin startproject base .
+# python manage.py runserver
+# python manage.py startapp shop
+# python manage.py migrate
+# python manage.py createsuperuser
+# python manage.py makemigrations
+# python manage.py migrate
+# python manage.py shell
+
+# from shop.models import Category, Course
+# Course.objects.all()
+# new_cat = Category(title="programming")
+# new_cat.save()
+# new_cat = Category(title="programming")
+# new_cat.title
+# new_cat.created_at
+# Category.objects.get(pk=1)
+# Category.objects.all()
+# Category.objects.filter(title="programming")
+# Category.objects.filter(title="programming").first()
+# Category.objects.filter(title="programming").last()
+# Category.objects.filter(title="programming").count()
+# Category.objects.filter(title="programming").delete()
+# Category.objects.filter(title="programming").update(title="programming")
+# Category.objects.filter(title="programming").update(title="programming")
+
+# category = Category.objects.get()
+# category.course_set.all()
+# category.course_set.create(title="Python", price=100, students_qty=110, reviews_qty=10)
+# [course.title for course in Course.objects.all()]
+
+# new_course = Course(title="Python", price=100, students_qty=0, reviews_qty=0, category=new_cat)
+# new_course.save()
+# Course.objects.get(pk=1)
+# new_course.title
+# new_course.price
+# new_course.students_qty
+# new_course.reviews_qty
+# new_course.category
+# new_course.created_at
+# Course.objects.all()

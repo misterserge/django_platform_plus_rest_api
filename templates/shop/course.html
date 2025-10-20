@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% comment %} {% block title %}{{ title }}{% endblock
+%} {% endcomment %} {% block content %}
+<h1>Categories</h1>
+<table class="table mt-5 table-bordered table-striped table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Students Qty</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for course in courses %}
+    <tr>
+      <td>
+        <a href="{% url 'shop:course_detail' course.id %}">
+          {{ course.title }}
+        </a>
+      </td>
+      <td>{{ course.category }}</td>
+      <td>{{ course.price }}</td>
+      <td>{{ course.students_qty }}</td>
+      <td><button class="btn btn-primary">Buy</button></td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+{% endblock %}
